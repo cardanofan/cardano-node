@@ -265,22 +265,22 @@ namesForChainSyncServerEvent TraceChainSyncRollBackward      {} =
 instance ConvertRawHash blk
       => LogFormatting (TraceChainSyncServerEvent blk) where
   forMachine _dtal (TraceChainSyncServerRead tip (AddBlock _hdr)) =
-      mconcat $
+      mconcat
                [ "kind" .= String "ChainSyncServerRead.AddBlock"
                , tipToObject tip
                ]
   forMachine _dtal (TraceChainSyncServerRead tip (RollBack _pt)) =
-      mconcat $
+      mconcat
                [ "kind" .= String "ChainSyncServerRead.RollBack"
                , tipToObject tip
                ]
   forMachine _dtal (TraceChainSyncServerReadBlocked tip (AddBlock _hdr)) =
-      mconcat $
+      mconcat
                [ "kind" .= String "ChainSyncServerReadBlocked.AddBlock"
                , tipToObject tip
                ]
   forMachine _dtal (TraceChainSyncServerReadBlocked tip (RollBack _pt)) =
-      mconcat $
+      mconcat
                [ "kind" .= String "ChainSyncServerReadBlocked.RollBack"
                , tipToObject tip
                ]
