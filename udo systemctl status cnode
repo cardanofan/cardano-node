@@ -1,0 +1,12 @@
+[0;1;32m●[0m cnode.service - Cardano Node
+     Loaded: loaded (/etc/systemd/system/cnode.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Tue 2022-03-22 16:55:54 EDT; 41s ago
+   Main PID: 132322 (bash)
+      Tasks: 14 (limit: 19147)
+     Memory: 184.7M
+     CGroup: /system.slice/cnode.service
+             ├─132322 bash /opt/cardano/cnode/scripts/cnode.sh
+             └─132438 /usr/local/bin/cardano-node run --topology /opt/cardano/cnode/files/topology.json --config /opt/cardano/cnode/files/config.json --database-path /opt/cardano/cnode/db --socket-path /opt/cardano/cnode/sockets/node0.socket --port 6000 --host-addr 0.0.0.0
+
+Mar 22 16:55:54 vmi828826.contaboserver.net systemd[1]: Started Cardano Node.
+Mar 22 16:55:56 vmi828826.contaboserver.net cnode[132438]: Listening on http://127.0.0.1:12798
